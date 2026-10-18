@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexa — Votre site web en français du Québec</title>
+<meta name="description" content="Lexa adapte votre site web en français du Québec : traduction naturelle, bouton FR/EN, livraison en 5 jours. À partir de 190 $.">
+<style>
+:root{
+  --bg:#faf8f4; --surface:#ffffff; --ink:#1b2430; --muted:#5b6675; --line:#e4dfd5;
+  --brand:#0f5c4d; --brand-ink:#ffffff; --accent:#d9822b; --soft:#e8f1ee;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#10161d; --surface:#18212b; --ink:#eef1f4; --muted:#a3adba; --line:#2a3644;
+        --brand:#3fb59b; --brand-ink:#08201a; --accent:#f0a24f; --soft:#162b28}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:var(--brand)}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo b{color:var(--accent)}
+nav{display:flex;align-items:center;gap:18px;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:.85rem;cursor:pointer}
+@media(max-width:700px){nav .hide{display:none}}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:14px 24px;border-radius:12px;font-weight:700;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero{padding:72px 0 56px}
+.eyebrow{display:inline-block;background:var(--soft);color:var(--brand);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.1;letter-spacing:-.03em;margin:0 0 18px;max-width:18ch}
+.lead{font-size:1.2rem;color:var(--muted);max-width:58ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;color:var(--muted);font-size:.95rem;padding:0;list-style:none}
+.trust li:before{content:"✓ ";color:var(--brand);font-weight:800}
+section{padding:56px 0}
+section h2{font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:-.02em;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:60ch}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted)}
+.num{width:34px;height:34px;border-radius:50%;background:var(--soft);color:var(--brand);display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+.band{background:var(--soft);border-block:1px solid var(--line)}
+.price{font-size:2.4rem;font-weight:800;letter-spacing:-.03em;margin:6px 0}
+.price small{font-size:1rem;font-weight:500;color:var(--muted)}
+.card ul{padding-left:1.1rem;color:var(--muted);margin:12px 0 20px}
+.card.pop{border:2px solid var(--brand);position:relative}
+.tag{position:absolute;top:-13px;left:20px;background:var(--accent);color:#1b1206;font-weight:800;font-size:.78rem;padding:4px 12px;border-radius:999px}
+.ba{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.ba .card{font-size:.98rem}
+.ba .before{border-left:4px solid #c0463c}.ba .after{border-left:4px solid var(--brand)}
+.ba small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;color:var(--muted)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin:10px 0 0}
+form{display:grid;gap:12px;max-width:560px}
+input,textarea{width:100%;font:inherit;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+label{font-weight:600;font-size:.92rem}
+.note{font-size:.85rem;color:var(--muted)}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+[data-en]{display:none}
+html.en [data-fr]{display:none}
+html.en [data-en]{display:revert}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Lex<b>a</b></a>
+    <nav>
+      <a class="hide" href="#services"><span data-fr>Services</span><span data-en>Services</span></a>
+      <a class="hide" href="#tarifs"><span data-fr>Tarifs</span><span data-en>Pricing</span></a>
+      <a class="hide" href="#faq">FAQ</a>
+      <a href="#contact" class="btn" style="padding:8px 16px;font-size:.9rem"><span data-fr>Soumission</span><span data-en>Get a quote</span></a>
+      <button class="lang" id="langBtn" aria-label="Changer de langue / Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span data-fr>Sites web en français du Québec</span><span data-en>Websites in Quebec French</span></span>
+    <h1><span data-fr>Votre site, enfin en français.</span><span data-en>Your website, finally in French.</span></h1>
+    <p class="lead">
+      <span data-fr>Au Québec, la Charte de la langue française demande que votre site soit disponible en français. Lexa traduit et adapte votre site avec un ton naturel, pas une traduction automatique, et le livre en 5 jours.</span>
+      <span data-en>In Quebec, the Charter of the French Language requires your website to be available in French. Lexa translates and adapts your site in natural Quebec French — not machine translation — and delivers it in 5 days.</span>
+    </p>
+    <div class="cta">
+      <a class="btn" href="#contact"><span data-fr>Recevoir ma page d'accueil traduite gratuitement</span><span data-en>Get my homepage translated for free</span></a>
+      <a class="btn ghost" href="#tarifs"><span data-fr>Voir les tarifs</span><span data-en>See pricing</span></a>
+    </div>
+    <ul class="trust">
+      <li><span data-fr>Livraison en 5 jours</span><span data-en>5-day delivery</span></li>
+      <li><span data-fr>À partir de 190 $</span><span data-en>From $190</span></li>
+      <li><span data-fr>Satisfaction garantie</span><span data-en>Satisfaction guaranteed</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="pourquoi" class="band">
+  <div class="wrap">
+    <h2><span data-fr>Pourquoi passer au français</span><span data-en>Why switch to French</span></h2>
+    <p class="sub"><span data-fr>Ce n'est pas qu'une obligation légale : c'est aussi vos clients.</span><span data-en>It's not only a legal requirement — it's also your customers.</span></p>
+    <div class="grid">
+      <div class="card"><h3><span data-fr>Éviter les ennuis</span><span data-en>Avoid trouble</span></h3><p><span data-fr>Un site sans français vous expose à une plainte à l'OQLF. Les amendes pour une entreprise vont de 3 000 $ à 30 000 $.</span><span data-en>A site without French can lead to a complaint to the OQLF. Fines for a business range from $3,000 to $30,000.</span></p></div>
+      <div class="card"><h3><span data-fr>Rejoindre plus de clients</span><span data-en>Reach more customers</span></h3><p><span data-fr>La grande majorité des Québécois vivent surtout en français. Un site bilingue vous ouvre toute la clientèle.</span><span data-en>The vast majority of Quebecers use French day to day. A bilingual site opens up your whole market.</span></p></div>
+      <div class="card"><h3><span data-fr>Inspirer confiance</span><span data-en>Build trust</span></h3><p><span data-fr>Un français soigné, avec les bons termes d'ici, montre que vous êtes de la région.</span><span data-en>Polished French with local terms shows you're one of the community.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2><span data-fr>Ce que Lexa fait pour vous</span><span data-en>What Lexa does for you</span></h2>
+    <p class="sub"><span data-fr>Vous nous donnez l'accès à votre site. On s'occupe du reste.</span><span data-en>You give us access to your site. We handle the rest.</span></p>
+    <div class="grid">
+      <div class="card"><div class="num">1</div><h3><span data-fr>Traduction et adaptation</span><span data-en>Translation & adaptation</span></h3><p><span data-fr>Textes réécrits en français du Québec : vocabulaire, ton et formules d'ici.</span><span data-en>Copy rewritten in Quebec French: local vocabulary, tone and phrasing.</span></p></div>
+      <div class="card"><div class="num">2</div><h3><span data-fr>Bouton FR / EN</span><span data-en>FR / EN switch</span></h3><p><span data-fr>Un sélecteur de langue visible sur chaque page, pour que vos visiteurs choisissent.</span><span data-en>A visible language switch on every page so visitors can choose.</span></p></div>
+      <div class="card"><div class="num">3</div><h3><span data-fr>Visible dans Google</span><span data-en>Visible on Google</span></h3><p><span data-fr>Titres, descriptions et mots-clés en français pour être trouvé par les gens d'ici.</span><span data-en>French titles, descriptions and keywords so local searchers find you.</span></p></div>
+      <div class="card"><div class="num">4</div><h3><span data-fr>Suivi mensuel</span><span data-en>Monthly updates</span></h3><p><span data-fr>Nouveau contenu, promotions, corrections : on garde votre version française à jour.</span><span data-en>New content, promos, fixes: we keep your French version up to date.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2><span data-fr>Un exemple avant / après</span><span data-en>A before / after example</span></h2>
+    <p class="sub"><span data-fr>La différence entre une traduction littérale et une adaptation.</span><span data-en>The difference between a literal translation and an adaptation.</span></p>
+    <div class="ba">
+      <div class="card before"><small><span data-fr>Original</span><span data-en>Original</span></small>“Get a free quote in 24 hours. Licensed &amp; insured.”</div>
+      <div class="card before"><small><span data-fr>Traduction automatique</span><span data-en>Machine translation</span></small>« Obtenez un devis gratuit en 24 heures. Autorisé et assuré. »</div>
+      <div class="card after"><small>Lexa</small>« Soumission gratuite en 24 h. Entrepreneur licencié et assuré. »</div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="wrap">
+    <h2><span data-fr>Tarifs simples</span><span data-en>Simple pricing</span></h2>
+    <p class="sub"><span data-fr>Prix fixes, sans surprise. 50 % à la commande, 50 % à la livraison.</span><span data-en>Fixed prices, no surprises. 50% upfront, 50% on delivery.</span></p>
+    <div class="grid">
+      <div class="card"><h3><span data-fr>Départ</span><span data-en>Starter</span></h3><div class="price">190 $</div><p><span data-fr>1 à 5 pages</span><span data-en>1 to 5 pages</span></p>
+        <ul><li><span data-fr>Traduction adaptée</span><span data-en>Adapted translation</span></li><li><span data-fr>Bouton FR / EN</span><span data-en>FR / EN switch</span></li><li><span data-fr>1 ronde de corrections</span><span data-en>1 round of revisions</span></li></ul>
+        <a class="btn ghost" href="#contact"><span data-fr>Choisir</span><span data-en>Choose</span></a></div>
+      <div class="card pop"><span class="tag"><span data-fr>Le plus choisi</span><span data-en>Most popular</span></span><h3><span data-fr>Complet</span><span data-en>Complete</span></h3><div class="price">390 $</div><p><span data-fr>6 à 12 pages</span><span data-en>6 to 12 pages</span></p>
+        <ul><li><span data-fr>Tout le forfait Départ</span><span data-en>Everything in Starter</span></li><li><span data-fr>Titres et descriptions pour Google</span><span data-en>Google titles &amp; descriptions</span></li><li><span data-fr>Relecture finale</span><span data-en>Final proofread</span></li></ul>
+        <a class="btn" href="#contact"><span data-fr>Choisir</span><span data-en>Choose</span></a></div>
+      <div class="card"><h3><span data-fr>Suivi</span><span data-en>Care plan</span></h3><div class="price">49 $ <small>/ <span data-fr>mois</span><span data-en>month</span></small></div><p><span data-fr>Après la livraison</span><span data-en>After delivery</span></p>
+        <ul><li><span data-fr>Mises à jour de contenu</span><span data-en>Content updates</span></li><li><span data-fr>Nouvelles pages traduites</span><span data-en>New pages translated</span></li><li><span data-fr>Sans engagement</span><span data-en>No contract</span></li></ul>
+        <a class="btn ghost" href="#contact"><span data-fr>Choisir</span><span data-en>Choose</span></a></div>
+    </div>
+    <p class="note" style="margin-top:18px"><span data-fr>Livraison express en 48 h : +25 %. Plus de 12 pages ou boutique en ligne : sur soumission.</span><span data-en>48-hour rush delivery: +25%. Over 12 pages or an online store: custom quote.</span></p>
+    <p class="note"><span data-fr>Garantie : si la première version ne vous convient pas, on la reprend sans frais. Si elle ne vous convient toujours pas, vous ne payez pas le solde.</span><span data-en>Guarantee: if the first version doesn't suit you, we redo it free. If it still doesn't, you don't pay the balance.</span></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2><span data-fr>Comment ça marche</span><span data-en>How it works</span></h2>
+    <div class="grid" style="margin-top:24px">
+      <div class="card"><div class="num">1</div><h3><span data-fr>Vous nous écrivez</span><span data-en>You contact us</span></h3><p><span data-fr>Envoyez l'adresse de votre site. On vous traduit la page d'accueil gratuitement.</span><span data-en>Send your site address. We translate your homepage for free.</span></p></div>
+      <div class="card"><div class="num">2</div><h3><span data-fr>Vous approuvez</span><span data-en>You approve</span></h3><p><span data-fr>Vous choisissez un forfait et versez 50 %.</span><span data-en>You pick a plan and pay 50%.</span></p></div>
+      <div class="card"><div class="num">3</div><h3><span data-fr>On livre en 5 jours</span><span data-en>We deliver in 5 days</span></h3><p><span data-fr>Votre site français est prêt, vous payez le solde.</span><span data-en>Your French site is ready; you pay the balance.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>FAQ</h2>
+    <details><summary><span data-fr>Mon site doit-il vraiment être en français?</span><span data-en>Does my site really need to be in French?</span></summary><p><span data-fr>Au Québec, la Charte de la langue française prévoit que les entreprises offrent leur site en français. Pour votre situation précise, consultez l'OQLF ou un avocat : Lexa ne donne pas de conseil juridique.</span><span data-en>In Quebec, the Charter of the French Language provides that businesses offer their website in French. For your specific situation, check with the OQLF or a lawyer — Lexa does not give legal advice.</span></p></details>
+    <details><summary><span data-fr>Sur quelles plateformes travaillez-vous?</span><span data-en>Which platforms do you work on?</span></summary><p><span data-fr>Wix, Square, Shopify, GoDaddy, WordPress, Weebly et sites sur mesure. Si vous nous donnez accès, on publie pour vous; sinon on vous remet les textes prêts à coller.</span><span data-en>Wix, Square, Shopify, GoDaddy, WordPress, Weebly and custom sites. With access we publish for you; otherwise we hand over copy ready to paste.</span></p></details>
+    <details><summary><span data-fr>Est-ce une traduction automatique?</span><span data-en>Is it machine translation?</span></summary><p><span data-fr>Non. Chaque texte est adapté et relu pour sonner naturel en français du Québec.</span><span data-en>No. Every text is adapted and proofread to sound natural in Quebec French.</span></p></details>
+    <details><summary><span data-fr>Puis-je garder mon site en anglais aussi?</span><span data-en>Can I keep my English site too?</span></summary><p><span data-fr>Oui. On ajoute le français à côté de l'anglais avec un bouton FR / EN.</span><span data-en>Yes. We add French next to English with a FR / EN switch.</span></p></details>
+  </div>
+</section>
+
+<section id="contact" class="band">
+  <div class="wrap">
+    <h2><span data-fr>Recevez votre page d'accueil traduite, gratuitement</span><span data-en>Get your homepage translated, free</span></h2>
+    <p class="sub"><span data-fr>Dites-nous où est votre site. Réponse en moins de 24 h ouvrables.</span><span data-en>Tell us where your site is. Reply within one business day.</span></p>
+    <form id="f">
+      <div><label for="n"><span data-fr>Votre nom</span><span data-en>Your name</span></label><input id="n" required></div>
+      <div><label for="e"><span data-fr>Courriel</span><span data-en>Email</span></label><input id="e" type="email" required></div>
+      <div><label for="u"><span data-fr>Adresse de votre site</span><span data-en>Your website address</span></label><input id="u" placeholder="https://"></div>
+      <div><label for="m"><span data-fr>Message (facultatif)</span><span data-en>Message (optional)</span></label><textarea id="m"></textarea></div>
+      <button class="btn" type="submit"><span data-fr>Envoyer ma demande</span><span data-en>Send my request</span></button>
+      <p class="note"><span data-fr>Le bouton ouvre votre application courriel avec le message prêt à envoyer. Ou écrivez-nous à</span><span data-en>This button opens your email app with the message ready to send. Or write to</span> <a href="mailto:courriel@exemple.com">courriel@exemple.com</a>.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Lexa — <span data-fr>Sites web en français du Québec</span><span data-en>Websites in Quebec French</span></span>
+    <span>courriel@exemple.com · (000) 000-0000 · Montréal, QC</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // === À MODIFIER : tes coordonnées ===
+  var CONTACT_EMAIL = "courriel@exemple.com";
+  // ====================================
+  var root = document.documentElement, btn = document.getElementById("langBtn");
+  function setLang(l){
+    root.classList.toggle("en", l === "en");
+    root.lang = l;
+    btn.textContent = l === "en" ? "FR" : "EN";
+    try { localStorage.setItem("lexa-lang", l); } catch(e){}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("lexa-lang"); } catch(e){}
+  setLang(saved || "fr");
+  btn.addEventListener("click", function(){ setLang(root.classList.contains("en") ? "fr" : "en"); });
+  document.getElementById("y").textContent = new Date().getFullYear();
+  document.getElementById("f").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var g = function(i){ return document.getElementById(i).value; };
+    var subject = "Demande Lexa — " + g("n");
+    var body = "Nom: " + g("n") + "\nCourriel: " + g("e") + "\nSite: " + g("u") + "\n\n" + g("m");
+    location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
