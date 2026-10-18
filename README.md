@@ -1,4 +1,4 @@
-# Lexa — site vitrine
+# Plume Web — site vitrine
 
 Un seul fichier : `index.html` (français par défaut, bouton EN pour l'anglais).
 
@@ -8,10 +8,10 @@ Dans `index.html`, remplace :
 - `(000) 000-0000`
 
 ## 2. Publier sur GitHub Pages
-1. Crée un compte sur github.com puis un nouveau dépôt public, par exemple `lexa`.
+1. Crée un compte sur github.com puis un nouveau dépôt public, par exemple `plumeweb`.
 2. Clique « uploading an existing file » et glisse `index.html` (et ce README), puis « Commit changes ».
 3. Va dans **Settings → Pages**. Sous « Build and deployment », choisis **Deploy from a branch**, branche **main**, dossier **/ (root)**, puis **Save**.
-4. Après 1 à 2 minutes, ton site est à : `https://TON-NOM-GITHUB.github.io/lexa/`
+4. Après 1 à 2 minutes, ton site est à : `https://TON-NOM-GITHUB.github.io/plumeweb/`
 
 ## 3. Nom de domaine (facultatif, recommandé)
-Achète `lexa.ca` (ou similaire) chez un registraire, puis dans **Settings → Pages → Custom domain**, entre le domaine et suis les instructions DNS de GitHub.
+Achète `plumeweb.ca` (ou similaire) chez un registraire, puis dans **Settings → Pages → Custom domain**, entre le domaine et suis les instructions DNS de GitHub.
