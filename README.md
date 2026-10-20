@@ -4,7 +4,7 @@ Un seul fichier : `index.html` (français par défaut, bouton EN pour l'anglais)
 
 ## 1. Mettre tes coordonnées
 Dans `index.html`, remplace :
-- `courriel@exemple.com` (4 endroits, dont `CONTACT_EMAIL` dans le script)
+- `plumewebp@gmail.com` (4 endroits, dont `CONTACT_EMAIL` dans le script)
 - `(000) 000-0000`
 
 ## 2. Publier sur GitHub Pages
